@@ -4,19 +4,11 @@ import comfy.model_management
 import torch
 import random
 
-__all__ = [
-    "a1",
-    "a2",
-    "a3",
-    "a4",
-]
-
-
 class a1:
     def __init__(self):
         pass
 
-    CATEGORY = "tutorial/example"
+    CATEGORY = "12utils/tutorial"
 
     @classmethod
     def INPUT_TYPES(s):
@@ -154,3 +146,11 @@ class a4:
         noise = torch.randn((1, 3, width, height), device="cuda")
         tensor = noise.permute(0, 2, 3, 1).cpu()
         return (tensor,)
+
+NODE_CLASS_MAPPINGS = {
+    "a1": a1,"a2": a2,"a3": a3,"a4":a4, # 教程示例
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "a1": "a1基础格式","a2": "a2基础数据类型","a3": "a3基础调用流程","a4":"a4一个可以运行的节点", 
+}

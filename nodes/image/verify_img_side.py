@@ -12,10 +12,6 @@ VerifyImage插件。
     按方式比较对象和数值，返回真或假
 '''
 
-__all__ = [
-    "VerifyImageSide"
-]
-
 class VerifyImageSide:
     def __init__(self):
         pass
@@ -63,3 +59,11 @@ class VerifyImageSide:
 # Example usage:
 # result = VerifyImageSide().execute(image_array, "min_side", ">", 256)
 # print(result)
+
+NODE_CLASS_MAPPINGS = {
+    "VerifyImageSide": VerifyImageSide, # 验证图片边长
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "VerifyImageSide": "Verify Image Side", # 验证图片边长
+}

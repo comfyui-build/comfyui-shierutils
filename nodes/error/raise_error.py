@@ -1,14 +1,10 @@
-__all__ = [
-    "RaiseErrorNode"
-]
-
 # Define the custom error base class
 class CustomError(Exception):
     """Base class for custom exceptions"""
     pass
 
 # Define the node class for raising custom errors
-class RaiseErrorNode:
+class RaiseError:
     @classmethod
     def INPUT_TYPES(s):
         return {
@@ -32,5 +28,13 @@ class RaiseErrorNode:
             raise error()
         return ()
 
+NODE_CLASS_MAPPINGS = {
+    "RaiseError": RaiseError, # 报错
+}
+
+NODE_DISPLAY_NAME_MAPPINGS = {
+    "RaiseErrorNode": "Raise Error",
+}
+
 # test
-RaiseErrorNode().execute(True, True, "超出最大边长")
+# RaiseErrorNode().execute(True, True, "超出最大边长")
