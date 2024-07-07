@@ -9,7 +9,7 @@ class RaiseError:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "trigger": ("BOOLEAN",),
+                "BOOL": ("BOOLEAN",),
                 "bool": ("BOOLEAN", {"default": False}),
             },
             "optional": {

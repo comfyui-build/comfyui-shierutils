@@ -20,7 +20,7 @@ class VerifyImageSide:
     def INPUT_TYPES(cls):
         return {
             "required": {
-                "image": ("IMAGE",),
+                "IMAGE": ("IMAGE",),
                 "object": (["min_side", "max_side", "total_pixels"], {"default": "min_side"}),
                 "comparison": ([">", ">=", "=", "<", "<="], {"default": ">"}),
                 "value": ("INT", {"default": 256})
@@ -30,7 +30,7 @@ class VerifyImageSide:
     RETURN_TYPES = ("BOOL",)
     FUNCTION = "execute"
 
-    CATEGORY = "12utils/compare"
+    CATEGORY = "12utils/image"
 
     def execute(self, image, object, comparison, value):
         # Assuming image is a numpy array with shape (height, width, channels)
