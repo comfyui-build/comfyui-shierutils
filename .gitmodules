@@ -1,0 +1,3 @@
+[submodule "thirdparty/stability_ComfyUI_nodes"]
+	path = thirdparty/stability_ComfyUI_nodes
+	url = https://github.com/comfyui-build/stability_ComfyUI_nodes
