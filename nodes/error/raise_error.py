@@ -9,7 +9,7 @@ class RaiseError:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "BOOL": ("BOOLEAN",),
+                "BOOL": ("BOOL",),
                 "bool": ("BOOLEAN", {"default": False}),
             },
             "optional": {
@@ -17,7 +17,7 @@ class RaiseError:
             }
         }
 
-    RETURN_TYPES = ()
+    #RETURN_TYPES = ()
     FUNCTION = "execute"
     CATEGORY = "12utils/error"
 

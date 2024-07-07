@@ -1,7 +1,7 @@
 from importlib import import_module
 
 node_list = {
-    'image': ['verify_img_side','get_img_size'],
+    'image': ['verify_img_side', 'get_img_size', 'bw_color_blend'],
     'tutorial': ['example'],
     'error': ['raise_error']
 }
