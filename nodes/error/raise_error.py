@@ -17,7 +17,7 @@ class RaiseError:
             }
         }
 
-    #RETURN_TYPES = ()
+    RETURN_TYPES = ()
     FUNCTION = "execute"
     CATEGORY = "12utils/error"
 
