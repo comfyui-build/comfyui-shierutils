@@ -1,27 +1,27 @@
-class GetImageSize:
-    @classmethod
-    def INPUT_TYPES(cls):
-        return {
-            "required": {
-                "image": ("IMAGE",),
-            }
-        }
+'''
+author:
+    Stability-AI/stability-ComfyUI-nodes
 
-    RETURN_TYPES = ("INT", "INT")
-    RETURN_NAMES = ("width", "height")
+overview:
+    This node retrieves the dimensions (width and height) of an input image.
 
-    FUNCTION = "get_size"
+input:
+    image(torch.Tensor): Input image tensor.
 
-    CATEGORY = "12utils/image"
+output:
+    INT: Width of the image.
+    INT: Height of the image.
 
-    def get_size(self, image):
-        _, height, width, _ = image.shape
-        return (width, height)
+# zh
+功能:
+    此节点获取输入图像的尺寸（宽度和高度）。
 
-NODE_CLASS_MAPPINGS = {
-    'GetImageSize': GetImageSize
-}
+输入:
+    image(torch.Tensor): 输入图像张量。
 
-NODE_DISPLAY_NAME_MAPPINGS = {
-    'GetImageSize': 'Get Image Size'
-}
+输出:
+    INT: 图像的宽度。
+    INT: 图像的高度。
+'''
+
+from ...thirdparty.stability_ComfyUI_nodes.get_img_size import *
